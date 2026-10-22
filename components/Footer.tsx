@@ -160,7 +160,7 @@ export default function Footer() {
         <div className="mt-14 border-t border-white/10 pt-6 sm:mt-16">
           <div className="flex flex-col gap-4 text-xs leading-6 text-white/45 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} ARCHITECT — Mohab Ismail. All rights
+              © 2026 ARCHITECT — Mohab Ismail. All rights
               reserved.
             </p>
 

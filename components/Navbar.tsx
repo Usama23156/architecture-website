@@ -1,37 +1,60 @@
 
 "use client";
 
-import { useState } from "react";
-
-const navLinks = [
-  { label: "Properties", href: "#properties", ar: "الوحدات العقارية" },
-  { label: "Services", href: "#services", ar: "الخدمات" },
-  { label: "About", href: "#about", ar: "من أنا" },
-  { label: "Contact", href: "#contact", ar: "تواصل معي" },
-];
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "@/store/store";
+import { setLanguage } from "@/store/languageSlice";
+import useTranslation from "@/hooks/useTranslation";
 
 export default function Navbar() {
-  const [language, setLanguage] = useState<"en" | "ar">("en");
-  const isArabic = language === "ar";
+  const dispatch = useDispatch<AppDispatch>();
+  const { lang, t } = useTranslation();
+
+  const isArabic = lang === "ar";
+
+  const navLinks = [
+    {
+      label: t.navbar.properties,
+      href: "#properties",
+    },
+    {
+      label: t.navbar.services,
+      href: "#services",
+    },
+    {
+      label: t.navbar.about,
+      href: "#about",
+    },
+    {
+      label: t.navbar.contact,
+      href: "#contact",
+    },
+  ];
+
+  function toggleLanguage() {
+    dispatch(setLanguage(isArabic ? "en" : "ar"));
+  }
 
   return (
     <>
-      <div className="bg-[#17251f] py-[9px] text-xs text-[#f7f6f1] max-sm:text-[10px]">
+      {/* Top Bar */}
+      <div
+        className="bg-[#17251f] py-[9px] text-xs text-[#f7f6f1] max-sm:text-[10px]"
+        dir={isArabic ? "rtl" : "ltr"}
+      >
         <div className="mx-auto flex w-[92%] items-center justify-between gap-3">
-          <span>
-            {isArabic ? "عقارات · تصميم · تنفيذ" : "PROPERTY · DESIGN · DELIVERY"}
-          </span>
-
-          <span>
-            {isArabic
-              ? "نخدم العملاء في جميع أنحاء مصر"
-              : "Serving clients across Egypt"}
-          </span>
+          <span>{t.navbar.topbar}</span>
+          <span>{t.navbar.topbarLocation}</span>
         </div>
       </div>
 
-      <header className="sticky top-0 z-10 border-b border-[#e2e4dc] bg-[#f7f6f1]/95 backdrop-blur-xl">
+      {/* Main Navbar */}
+      <header
+        className="sticky top-0 z-50 border-b border-[#e2e4dc] bg-[#f7f6f1]/95 backdrop-blur-xl"
+        dir={isArabic ? "rtl" : "ltr"}
+      >
         <div className="mx-auto flex min-h-[76px] w-[92%] items-center justify-between gap-5 max-sm:min-h-[66px]">
+          {/* Brand */}
           <a
             href="#home"
             className="shrink-0 text-lg font-extrabold tracking-[-0.6px] text-[#17251f] max-sm:text-[13px]"
@@ -39,12 +62,11 @@ export default function Navbar() {
             ARCHITECT / MOHAB ISMAIL
 
             <small className="mt-0.5 block text-[10px] font-semibold uppercase tracking-[2px] text-[#69746d] max-sm:text-[9px]">
-              {isArabic
-                ? "العقارات والعمارة"
-                : "Real Estate & Architecture"}
+              {t.navbar.brandSubtitle}
             </small>
           </a>
 
+          {/* Navigation Links */}
           <nav className="hidden items-center gap-[25px] min-[851px]:flex">
             {navLinks.map((link) => (
               <a
@@ -52,25 +74,29 @@ export default function Navbar() {
                 href={link.href}
                 className="text-[13px] text-[#39453e] transition-colors hover:text-[#b58a56]"
               >
-                {isArabic ? link.ar : link.label}
+                {link.label}
               </a>
             ))}
           </nav>
 
+          {/* Actions */}
           <div className="flex shrink-0 items-center gap-2.5">
             <button
               type="button"
-              onClick={() => setLanguage(isArabic ? "en" : "ar")}
-              className="rounded-full border border-[#e2e4dc] px-[11px] py-2 text-xs text-[#17251f]"
+              onClick={toggleLanguage}
+              aria-label={
+                isArabic ? "Switch to English" : "التغيير إلى العربية"
+              }
+              className="rounded-full border border-[#e2e4dc] px-[11px] py-2 text-xs text-[#17251f] transition hover:border-[#b58a56]"
             >
-              {isArabic ? "English" : "العربية"}
+              {t.navbar.language}
             </button>
 
             <a
               href="#contact"
               className="rounded-full border border-[#17251f] bg-[#17251f] px-[17px] py-[11px] text-xs font-bold text-white transition hover:-translate-y-px hover:opacity-90 max-sm:hidden"
             >
-              {isArabic ? "لنتحدث ↗" : "Let's talk ↗"}
+              {t.navbar.talk}
             </a>
           </div>
         </div>

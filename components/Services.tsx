@@ -1,89 +1,91 @@
 
-const services = [
-  {
-    icon: "⌂",
-    title: "Property sourcing & listings",
-    description:
-      "Explore available units and get clear information to support your next property decision.",
-    topic: "Property enquiry",
-  },
-  {
-    icon: "✳",
-    title: "Interior finishing",
-    description:
-      "Scope definition, finish selection, coordination, and practical support from concept to execution.",
-    topic: "Interior finishing",
-  },
-  {
-    icon: "▧",
-    title: "Custom furniture drawings",
-    description:
-      "Made-to-measure furniture concepts and technical drawings tailored to your space.",
-    topic: "Furniture drawings",
-  },
-  {
-    icon: "◫",
-    title: "2D drawings & 3D visualization",
-    description:
-      "Architectural plans, technical drawing packages, and 3D views to communicate design intent.",
-    topic: "2D / 3D design",
-  },
-  {
-    icon: "✓",
-    title: "Unit handover & snagging",
-    description:
-      "Project-based inspection support across Egypt, with observations organized for follow-up.",
-    topic: "Unit handover inspection",
-  },
-  {
-    icon: "▤",
-    title: "Project management",
-    description:
-      "Progress follow-up, coordination, documentation, and clear reporting for project stakeholders.",
-    topic: "Project management",
-  },
-  {
-    icon: "⌘",
-    title: "Architecture academic support",
-    description:
-      "Presentation layout, research guidance, and drawing support for undergraduate architecture students.",
-    topic: "Academic support",
-  },
-];
+"use client";
+
+import useTranslation from "@/hooks/useTranslation";
 
 export default function Services() {
+  const { t, lang } = useTranslation();
+  const isArabic = lang === "ar";
+
+  const services = [
+    {
+      icon: "⌂",
+      title: t.services.propertySourcing.title,
+      description: t.services.propertySourcing.description,
+    },
+    {
+      icon: "✳",
+      title: t.services.interiorFinishing.title,
+      description: t.services.interiorFinishing.description,
+    },
+    {
+      icon: "▧",
+      title: t.services.furnitureDrawings.title,
+      description: t.services.furnitureDrawings.description,
+    },
+    {
+      icon: "◫",
+      title: t.services.design2D3D.title,
+      description: t.services.design2D3D.description,
+    },
+    {
+      icon: "✓",
+      title: t.services.unitHandover.title,
+      description: t.services.unitHandover.description,
+    },
+    {
+      icon: "▤",
+      title: t.services.projectManagement.title,
+      description: t.services.projectManagement.description,
+    },
+    {
+      icon: "⌘",
+      title: t.services.academicSupport.title,
+      description: t.services.academicSupport.description,
+    },
+  ];
+
   return (
     <section
       id="services"
+      dir={isArabic ? "rtl" : "ltr"}
       className="bg-[#e9ece5] py-16 md:py-20"
     >
       <div className="mx-auto w-[92%] max-w-[1180px]">
         {/* Section Heading */}
         <div className="mb-7 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-          <div>
+          <div className={isArabic ? "text-right" : "text-left"}>
             <span className="text-[11px] font-extrabold uppercase tracking-[2.5px] text-[#8d6b42]">
-              Beyond the listing
+              {t.services.eyebrow}
             </span>
 
             <h2 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-[#17251f] md:text-[42px]">
-              Architecture, made practical.
+              {t.services.title}
             </h2>
           </div>
 
-          <p className="max-w-[420px] text-sm leading-relaxed text-[#69746d]">
-            A focused set of services for property owners, buyers,
-            project teams, and architecture students.
+          <p
+            className={`max-w-[420px] text-sm leading-relaxed text-[#69746d] ${
+              isArabic ? "text-right" : "text-left"
+            }`}
+          >
+            {t.services.description}
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <article
-              key={service.title}
-              className="flex min-h-[210px] flex-col rounded-2xl border border-[#dce1d8] bg-[#fdfcf7] p-[23px] transition duration-200 hover:-translate-y-1 hover:shadow-lg"
+              key={index}
+              className={`flex min-h-[210px] flex-col rounded-2xl border border-[#dce1d8] bg-[#fdfcf7] p-[23px] text-start transition duration-200 hover:-translate-y-1 hover:shadow-lg ${
+                isArabic ? "items-start" : "items-start"
+              }`}
             >
-              <div className="mb-5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[#dfe6dc] text-xl text-[#17251f]">
+              <div
+                className="mb-5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[#dfe6dc] text-xl text-[#17251f]"
+                aria-hidden="true"
+              >
                 {service.icon}
               </div>
 
@@ -96,10 +98,17 @@ export default function Services() {
               </p>
 
               <a
-                href={`#contact?service=${encodeURIComponent(service.topic)}`}
+                href="#contact"
                 className="mt-auto text-xs font-extrabold text-[#17251f] transition-colors hover:text-[#b58a56]"
               >
-                Discuss this service ↗
+                {t.services.discussService}
+                <span
+                  dir="ltr"
+                  className={isArabic ? "mr-1" : "ml-1"}
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
               </a>
             </article>
           ))}

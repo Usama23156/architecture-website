@@ -1,0 +1,164 @@
+
+{
+  "navbar": {
+    "topbar": "PROPERTY · DESIGN · DELIVERY",
+    "topbarLocation": "Serving clients across Egypt",
+    "brandSubtitle": "Real Estate & Architecture",
+    "properties": "Properties",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "talk": "Let's talk ↗",
+    "language": "العربية"
+  },
+  "hero": {
+    "eyebrow": "REAL ESTATE & ARCHITECTURE",
+    "titleLine1": "Find your place.",
+  "titleLine2": "Shape your space.",
+  "imageAlt": "Contemporary architectural interior",
+    "title": "Spaces designed around your vision.",
+    "description": "Discover thoughtfully selected properties and architectural solutions tailored to your lifestyle and ambitions.",
+    "exploreProperties": "Explore Properties",
+    "ourServices": "Our Services",
+    "stats": {
+      "properties": "Featured Properties",
+      "services": "Professional Services",
+      "commitment": "Commitment to Quality"
+    }
+  },
+ 
+"properties": {
+  "eyebrow": "The property edit",
+  "title": "Find a unit that fits.",
+  "description": "Browse selected properties and explore their details. Prices and listings are illustrative examples.",
+  "searchPlaceholder": "Search project or location",
+  "searchAria": "Search properties",
+  "typeAria": "Filter by property type",
+  "purposeAria": "Filter by sale or rent",
+  "allTypes": "All property types",
+  "apartment": "Apartment",
+  "villa": "Villa",
+  "duplex": "Duplex",
+  "allPurposes": "Sale or rent",
+  "sale": "For sale",
+  "rent": "For rent",
+  "forSale": "FOR SALE",
+  "forRent": "FOR RENT",
+  "photos": "photos",
+  "bedrooms": "beds",
+  "bathrooms": "baths",
+  "area": "Area",
+  "areaUnit": "m²",
+  "viewUnit": "View unit",
+  "clearFilters": "Reset filters",
+  "noResults": "No matching listings. Try changing your filters.",
+  "disclaimer": "Prices and listings are illustrative examples."
+}
+,
+  
+"services": {
+  "eyebrow": "Beyond the listing",
+  "title": "Architecture, made practical.",
+  "description": "A focused set of services for property owners, buyers, project teams, and architecture students.",
+  "discussService": "Discuss this service",
+  "propertySourcing": {
+    "title": "Property sourcing & listings",
+    "description": "Explore available units and get clear information to support your next property decision."
+  },
+  "interiorFinishing": {
+    "title": "Interior finishing",
+    "description": "Scope definition, finish selection, coordination, and practical support from concept to execution."
+  },
+  "furnitureDrawings": {
+    "title": "Custom furniture drawings",
+    "description": "Made-to-measure furniture concepts and technical drawings tailored to your space."
+  },
+  "design2D3D": {
+    "title": "2D drawings & 3D visualization",
+    "description": "Architectural plans, technical drawing packages, and 3D views to communicate design intent."
+  },
+  "unitHandover": {
+    "title": "Unit handover & snagging",
+    "description": "Project-based inspection support across Egypt, with observations organized for follow-up."
+  },
+  "projectManagement": {
+    "title": "Project management",
+    "description": "Progress follow-up, coordination, documentation, and clear reporting for project stakeholders."
+  },
+  "academicSupport": {
+    "title": "Architecture academic support",
+    "description": "Presentation layout, research guidance, and drawing support for undergraduate architecture students."
+  }
+}
+,
+  "about": {
+    "eyebrow": "ABOUT ME",
+        "artworkTitle": "Architecture / Coordination",
+    "artworkDescription": "A practical mindset for spaces, details, and the people who use them.",
+    "title": "A Thoughtful Approach to Every Space",
+    "description": "I combine real estate knowledge with architectural thinking to help clients make informed decisions and bring their ideas to life.",
+    "highlights": [
+      "Property listings",
+      "2D / 3D design",
+      "Handover inspection",
+      "Project coordination"
+    ],
+    "button": "Let's Work Together",
+    "monogram": "MI",
+    "imageAlt": "Architectural design and property portfolio"
+  },
+  "contact": {
+    "eyebrow": "LET'S CONNECT",
+    "title": "Let's discuss your next project.",
+    "description": "Whether you're looking for your next property or planning a new architectural project, let's start a conversation.",
+    "informationTitle": "Contact Information",
+    "informationHeading": "We'd love to hear from you.",
+    "informationDescription": "Tell us what you have in mind and let's explore the next steps.",
+    "locationTitle": "Our Location",
+    "locationDescription": "Serving clients across Egypt.",
+    "emailTitle": "Email Us",
+    "emailDescription": "Get in touch to discuss your project.",
+    "hoursTitle": "Working Hours",
+    "hoursDescription": "Contact us to arrange a consultation.",
+    "formTitle": "Send us a message",
+    "formDescription": "Fill in the details below and tell us how we can help.",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "service": "How Can We Help?",
+    "selectService": "Select a service",
+    "message": "Your Message",
+    "namePlaceholder": "Your full name",
+    "phonePlaceholder": "Your phone number",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "Tell us about your project...",
+    "send": "Send Message",
+    "success": "Thank you for your message.",
+    "required": "Required"
+  },
+  "footer": {
+  "brandDescription": "Thoughtfully designed spaces and carefully selected properties built around your vision, lifestyle, and ambitions.",
+  "quickLinks": "Quick Links",
+  "home": "Home",
+  "propertiesLink": "Properties",
+  "servicesLink": "Services",
+  "aboutUs": "About Us",
+  "contactLink": "Contact",
+  "services": "Our Services",
+  "propertySales": "Property Sales",
+  "propertyRentals": "Property Rentals",
+  "propertyValuation": "Property Valuation",
+  "architecturalDesign": "Architectural Design",
+  "interiorDesign": "Interior Design",
+  "letsTalk": "Let's Talk",
+  "contactDescription": "Have a property in mind or a project to discuss? Let's start a conversation.",
+  "getInTouch": "Get in Touch",
+  "copyright": "All rights reserved.",
+  "backToTop": "Back to Top"
+},
+  "whatsapp": {
+    "label": "Chat with us on WhatsApp",
+    "message": "Hello, I'm interested in your properties and services.",
+    "propertyMessage": "Hello, I'm interested in this property:"
+  }
+}

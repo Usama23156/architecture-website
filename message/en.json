@@ -156,9 +156,93 @@
   "copyright": "All rights reserved.",
   "backToTop": "Back to Top"
 },
+
+"faq": {
+  "eyebrow": "Frequently Asked Questions",
+  "title": "Everything you need to know.",
+  "description": "Find answers to common questions about our property services and architectural solutions.",
+  "cardEyebrow": "Need some clarity?",
+  "cardTitle": "The right information makes every decision easier.",
+  "cardDescription": "Whether you're exploring a property or planning an architectural project, we're here to help you understand the process.",
+  "highlights": [
+    "Property buying and renting",
+    "Architectural and interior design",
+    "Project coordination and handover"
+  ],
+  "cardFooter": "Explore the answers to learn more about our services.",
+  "items": [
+    {
+      "question": "What property services do you offer?",
+      "answer": "We help clients explore property listings and find suitable units for buying or renting. Contact us to discuss your requirements and available options."
+    },
+    {
+      "question": "Do you provide architectural and interior design?",
+      "answer": "Yes. Services include architectural drawings, 2D plans, 3D visualization, interior finishing support, and custom furniture drawings."
+    },
+    {
+      "question": "Can you help with property handover inspections?",
+      "answer": "We offer project-based handover and snagging support, helping identify observations that may need attention before or during the handover process."
+    },
+    {
+      "question": "Do you manage architectural projects?",
+      "answer": "Project management support can include progress follow-up, coordination, documentation, and reporting, depending on the project scope."
+    },
+    {
+      "question": "Do you offer services across Egypt?",
+      "answer": "Services can be discussed for projects in different locations across Egypt. Availability and scope depend on the specific project."
+    },
+    {
+      "question": "How can I request a service or get more information?",
+      "answer": "Use the contact details or WhatsApp link provided on the website to explain what you need and discuss the next steps."
+    }
+  ]
+},
+
+"propertyData": {
+  "items": {
+    "1": {
+      "title": "Contemporary family apartment",
+      "location": "New Cairo · Fifth Settlement",
+      "description": "A bright, well-planned apartment with an open living area and a practical family layout."
+    },
+    "2": {
+      "title": "Modern standalone villa",
+      "location": "Sheikh Zayed · West Cairo",
+      "description": "A modern villa with a private garden and room for tailored finishes."
+    },
+    "3": {
+      "title": "Garden duplex residence",
+      "location": "Mostakbal City · East Cairo",
+      "description": "A spacious duplex with a distinct living zone and private outdoor space."
+    },
+    "4": {
+      "title": "Minimal city apartment",
+      "location": "Smouha · Alexandria",
+      "description": "A calm, functional apartment suited to professionals."
+    },
+    "5": {
+      "title": "Sea-view inspired residence",
+      "location": "North Coast · Project-based",
+      "description": "A sample coastal property listing. Verified project details are still needed."
+    },
+    "6": {
+      "title": "Quiet garden villa",
+      "location": "Madinaty · Greater Cairo",
+      "description": "A sample rental villa with garden-facing living spaces."
+    }
+  },
+  "priceOnRequest": "Request price",
+  "monthly": "/ month",
+  "about": "About this property",
+  "whatsapp": "Inquire on WhatsApp",
+  "whatsappMessage": "Hello, I'm interested in this property:"
+}
+
+,
   "whatsapp": {
     "label": "Chat with us on WhatsApp",
     "message": "Hello, I'm interested in your properties and services.",
     "propertyMessage": "Hello, I'm interested in this property:"
   }
 }
+

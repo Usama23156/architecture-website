@@ -87,7 +87,7 @@ export default function Navbar() {
               aria-label={
                 isArabic ? "Switch to English" : "التغيير إلى العربية"
               }
-              className="rounded-full border border-[#e2e4dc] px-[11px] py-2 text-xs text-[#17251f] transition hover:border-[#b58a56]"
+              className="rounded-full border cursor-pointer border-[#e2e4dc] px-[11px] py-2 text-xs text-[#17251f] transition hover:border-[#b58a56]"
             >
               {t.navbar.language}
             </button>

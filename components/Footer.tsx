@@ -25,7 +25,7 @@ export default function Footer() {
     >
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div className="grid mx-auto gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {/* Brand */}
           <div>
             <Link href="#home" className="inline-flex flex-col">

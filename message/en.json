@@ -97,16 +97,31 @@
     "artworkDescription": "A practical mindset for spaces, details, and the people who use them.",
     "title": "A Thoughtful Approach to Every Space",
     "description": "I combine real estate knowledge with architectural thinking to help clients make informed decisions and bring their ideas to life.",
-    "highlights": [
-      "Property listings",
-      "2D / 3D design",
-      "Handover inspection",
-      "Project coordination"
-    ],
     "button": "Let's Work Together",
     "monogram": "MI",
-    "imageAlt": "Architectural design and property portfolio"
+    "imageAlt": "Architectural design and property portfolio",
+    "name": "Mohab Ismail",
+  "role": "Architect & Real Estate Consultant",
+  "paragraphOne": "I'm an architect and real estate consultant focused on helping clients find their next home, from my available units or through tailored property search, and delivering complete design and build solutions — from concept to handover.",
+  "paragraphTwo": "My background as a site engineer and project coordinator at reputable firms in Egypt gives me the practical knowledge and industry connections to manage your project with precision, transparency, and care.",
+  "highlights": [
+    "Available Units & Property Consultation",
+    "Architecture & Design",
+    "Interior Fit-Out & Finishing",
+    "Project Coordination & Site Supervision",
+    "Trusted Network & Industry Experience"
+  ],
+  "footerTagline": "REAL HOMES / SMART INVESTMENTS / LASTING VALUE",
+  
+"bannerEyebrow": "REAL ESTATE  /  ARCHITECTURE  /  INTERIORS",
+"bannerTitleLine1": "Your Next Home.",
+"bannerTitleLine2": "Thoughtfully Chosen.",
+"bannerTitleLine3": "Lasting Value.",
+"bannerParagraphOne": "I help you find your next home, whether through my available units or personalized property search, while bringing your vision to life through architecture, interior design, and execution.",
+"bannerParagraphTwo": "I offer integrated solutions, from selecting the right property to considered architectural design, quality interior finishing, and careful project coordination through handover."
+
   },
+  
   "contact": {
     "eyebrow": "LET'S CONNECT",
     "title": "Let's discuss your next project.",
@@ -236,9 +251,10 @@
   "about": "About this property",
   "whatsapp": "Inquire on WhatsApp",
   "whatsappMessage": "Hello, I'm interested in this property:"
-}
+},
 
-,
+
+
   "whatsapp": {
     "label": "Chat with us on WhatsApp",
     "message": "Hello, I'm interested in your properties and services.",

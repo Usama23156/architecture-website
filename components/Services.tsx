@@ -2,6 +2,7 @@
 "use client";
 
 import useTranslation from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Services() {
   const { t, lang } = useTranslation();
@@ -52,6 +53,7 @@ export default function Services() {
       className="bg-[#e9ece5] py-16 md:py-20"
     >
       <div className="mx-auto w-[92%] max-w-[1180px]">
+      <ScrollReveal>
         {/* Section Heading */}
         <div className="mb-7 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div className={isArabic ? "text-right" : "text-left"}>
@@ -72,6 +74,7 @@ export default function Services() {
             {t.services.description}
           </p>
         </div>
+        </ScrollReveal>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
@@ -82,6 +85,7 @@ export default function Services() {
                 isArabic ? "items-start" : "items-start"
               }`}
             >
+              <ScrollReveal>
               <div
                 className="mb-5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[#dfe6dc] text-xl text-[#17251f]"
                 aria-hidden="true"
@@ -110,10 +114,12 @@ export default function Services() {
                   ↗
                 </span>
               </a>
+              </ScrollReveal>
             </article>
           ))}
         </div>
       </div>
+     
     </section>
   );
 }

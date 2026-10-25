@@ -3,6 +3,8 @@
 
 import Link from "next/link";
 import useTranslation from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ScrollReveal";
+
 
 export default function Footer() {
   const { t, lang } = useTranslation();
@@ -27,6 +29,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
         <div className="grid mx-auto gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {/* Brand */}
+          <ScrollReveal>
           <div>
             <Link href="#home" className="inline-flex flex-col">
               <span
@@ -82,8 +85,10 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Quick Links */}
+          <ScrollReveal>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em]">
               {t.footer.quickLinks}
@@ -105,10 +110,12 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          </ScrollReveal>
 
          
 
           {/* Contact CTA */}
+          <ScrollReveal>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em]">
               {t.footer.letsTalk}
@@ -145,6 +152,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
+          </ScrollReveal>
         </div>
 
         {/* Bottom Divider */}

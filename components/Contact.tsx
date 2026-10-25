@@ -3,6 +3,8 @@
 
 import { useState } from "react";
 import useTranslation from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ScrollReveal";
+
 
 export default function Contact() {
   const { t, lang } = useTranslation();
@@ -18,6 +20,7 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
+        <ScrollReveal>
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#a58a60]">
             {t.faq.eyebrow}
@@ -31,6 +34,7 @@ export default function Contact() {
             {t.faq.description}
           </p>
         </div>
+        </ScrollReveal>
 
         {/* FAQ Layout */}
         <div className="grid items-start gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-12">
@@ -38,7 +42,6 @@ export default function Contact() {
           <div className="relative overflow-hidden rounded-2xl bg-[#202a25] p-7 text-white sm:p-10">
             <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full border border-white/10" />
             <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-white/10" />
-
             <div className="relative z-10">
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#c5ad83]">
                 {t.faq.cardEyebrow}
@@ -71,6 +74,7 @@ export default function Contact() {
           </div>
 
           {/* FAQ Accordion */}
+          <ScrollReveal>
           <div className="space-y-3">
             {t.faq.items.map((item, index) => {
               const isOpen = openIndex === index;
@@ -137,6 +141,7 @@ export default function Contact() {
               );
             })}
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

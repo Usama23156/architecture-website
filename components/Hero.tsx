@@ -2,6 +2,7 @@
 "use client";
 
 import useTranslation from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Hero() {
   const { t, lang } = useTranslation();
@@ -39,6 +40,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-[#17251f]/65" />
 
       {/* Hero Content */}
+      <ScrollReveal>
       <div className="mx-auto w-[92%] max-w-[1180px]">
         <div
           className={`max-w-[700px] text-white ${
@@ -97,6 +99,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      </ScrollReveal>
+      
     </section>
   );
 }

@@ -4,6 +4,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { properties } from "@/data/properties";
 import useTranslation from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ScrollReveal";
 
 type Property = (typeof properties)[number];
 
@@ -106,6 +107,7 @@ export default function Properties() {
       className="bg-[#f7f6f1] py-16 md:py-20"
     >
       <div className="mx-auto w-[92%] max-w-295">
+      <ScrollReveal>
         {/* Section Heading */}
         <div className="mb-7 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div className="text-start">
@@ -122,7 +124,7 @@ export default function Properties() {
             {t.properties.description}
           </p>
         </div>
-
+        </ScrollReveal>
         {/* Property Cards */}
         <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
           {filteredProperties.map((property) => {
@@ -151,7 +153,7 @@ export default function Properties() {
                     ▧ {property.gallery} {t.properties.photos}
                   </span>
                 </div>
-
+                <ScrollReveal>
                 <div className="p-[18px] text-start">
                   <p className="mb-2 text-[11px] text-[#69746d]">
                     {translated.location}
@@ -188,6 +190,7 @@ export default function Properties() {
                     {t.properties.viewUnit} ↗
                   </button>
                 </div>
+                </ScrollReveal>
               </article>
             );
           })}
@@ -217,6 +220,7 @@ export default function Properties() {
           {t.properties.disclaimer}
         </p>
       </div>
+      
 
       {/* Property Details Modal */}
       {selectedProperty && (

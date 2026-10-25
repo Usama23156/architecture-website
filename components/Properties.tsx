@@ -123,53 +123,6 @@ export default function Properties() {
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="my-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_auto]">
-          <input
-            type="search"
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            placeholder={t.properties.searchPlaceholder}
-            aria-label={t.properties.searchAria}
-            className="min-w-0 rounded-[10px] border border-[#e2e4dc] bg-white px-3 py-3 text-start text-sm text-black outline-none focus:border-[#b58a56]"
-          />
-
-          <select
-            value={type}
-            onChange={(event) => setType(event.target.value)}
-            aria-label={t.properties.typeAria}
-            className="rounded-[10px] border border-[#e2e4dc] bg-white px-3 py-3 text-sm text-black outline-none focus:border-[#b58a56]"
-          >
-            <option value="">{t.properties.allTypes}</option>
-            <option value="Apartment">{t.properties.apartment}</option>
-            <option value="Villa">{t.properties.villa}</option>
-            <option value="Duplex">{t.properties.duplex}</option>
-          </select>
-
-          <select
-            value={purpose}
-            onChange={(event) => setPurpose(event.target.value)}
-            aria-label={t.properties.purposeAria}
-            className="rounded-[10px] border border-[#e2e4dc] bg-white px-3 py-3 text-sm text-black outline-none focus:border-[#b58a56]"
-          >
-            <option value="">{t.properties.allPurposes}</option>
-            <option value="Sale">{t.properties.sale}</option>
-            <option value="Rent">{t.properties.rent}</option>
-          </select>
-
-          <button
-            type="button"
-            onClick={() => {
-              setSearch("");
-              setType("");
-              setPurpose("");
-            }}
-            className="rounded-full border border-[#17251f] px-5 py-3 text-sm font-semibold text-[#17251f] transition hover:bg-[#17251f] hover:text-white"
-          >
-            {t.properties.clearFilters}
-          </button>
-        </div>
-
         {/* Property Cards */}
         <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
           {filteredProperties.map((property) => {

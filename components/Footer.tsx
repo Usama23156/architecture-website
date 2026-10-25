@@ -16,13 +16,7 @@ export default function Footer() {
     { label: t.footer.contactLink, href: "#contact" },
   ];
 
-  const services = [
-    t.footer.propertySales,
-    t.footer.propertyRentals,
-    t.footer.propertyValuation,
-    t.footer.architecturalDesign,
-    t.footer.interiorDesign,
-  ];
+  
 
   return (
     <footer
@@ -31,7 +25,7 @@ export default function Footer() {
     >
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr_1.2fr] lg:gap-10">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {/* Brand */}
           <div>
             <Link href="#home" className="inline-flex flex-col">
@@ -112,27 +106,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em]">
-              {t.footer.services}
-            </h3>
-
-            <div className="mb-5 mt-3 h-0.5 w-10 bg-[#a58a60]" />
-
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <a
-                    href="#services"
-                    className="text-sm text-white/60 transition hover:text-[#c5ad83]"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+         
 
           {/* Contact CTA */}
           <div>

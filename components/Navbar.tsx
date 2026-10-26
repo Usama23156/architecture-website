@@ -39,7 +39,7 @@ export default function Navbar() {
     <>
       {/* Top Bar */}
       <div
-        className="bg-[#17251f] py-[9px] text-xs text-[#f7f6f1] max-sm:text-[10px]"
+        className="bg-[#17251f] py-2.25 text-xs text-[#f7f6f1] max-sm:text-[10px]"
         dir={isArabic ? "rtl" : "ltr"}
       >
         <div className="mx-auto flex w-[92%] items-center justify-between gap-3">
@@ -53,7 +53,7 @@ export default function Navbar() {
         className="sticky top-0 z-50 border-b border-[#e2e4dc] bg-[#f7f6f1]/95 backdrop-blur-xl"
         dir={isArabic ? "rtl" : "ltr"}
       >
-        <div className="mx-auto flex min-h-[76px] w-[92%] items-center justify-between gap-5 max-sm:min-h-[66px]">
+        <div className="mx-auto flex min-h-19 w-[92%] items-center justify-between gap-5 max-sm:min-h-16.5">
           {/* Brand */}
           <a
             href="#home"
@@ -67,7 +67,7 @@ export default function Navbar() {
           </a>
 
           {/* Navigation Links */}
-          <nav className="hidden items-center gap-[25px] min-[851px]:flex">
+          <nav className="hidden items-center gap-6.25 min-[851px]:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -87,14 +87,14 @@ export default function Navbar() {
               aria-label={
                 isArabic ? "Switch to English" : "التغيير إلى العربية"
               }
-              className="rounded-full border cursor-pointer border-[#e2e4dc] px-[11px] py-2 text-xs text-[#17251f] transition hover:border-[#b58a56]"
+              className="rounded-full border cursor-pointer border-[#e2e4dc] px-2.75 py-2 text-xs text-[#17251f] transition hover:border-[#b58a56]"
             >
               {t.navbar.language}
             </button>
 
             <a
               href="#contact"
-              className="rounded-full border border-[#17251f] bg-[#17251f] px-[17px] py-[11px] text-xs font-bold text-white transition hover:-translate-y-px hover:opacity-90 max-sm:hidden"
+              className="rounded-full border border-[#17251f] bg-[#17251f] px-4.25 py-2.75 text-xs font-bold text-white transition hover:-translate-y-px hover:opacity-90 max-sm:hidden"
             >
               {t.navbar.talk}
             </a>

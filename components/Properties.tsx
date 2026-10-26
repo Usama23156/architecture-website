@@ -120,13 +120,13 @@ export default function Properties() {
             </h2>
           </div>
 
-          <p className="max-w-[420px] text-start text-sm leading-relaxed text-[#69746d]">
+          <p className="max-w-105 text-start text-sm leading-relaxed text-[#69746d]">
             {t.properties.description}
           </p>
         </div>
         </ScrollReveal>
         {/* Property Cards */}
-        <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4.5 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProperties.map((property) => {
             const translated = getPropertyText(property);
 
@@ -135,7 +135,7 @@ export default function Properties() {
                 key={property.id}
                 className="overflow-hidden rounded-[18px] border border-[#e2e4dc] bg-[#fffefa] transition duration-200 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="relative h-[230px] overflow-hidden bg-[#e5e4dc]">
+                <div className="relative h-57.5 overflow-hidden bg-[#e5e4dc]">
                   <img
                     src={property.image}
                     alt={translated.title}
@@ -143,18 +143,18 @@ export default function Properties() {
                     className="h-full w-full object-cover transition duration-300 hover:scale-105"
                   />
 
-                  <span className="absolute start-[13px] top-[13px] rounded-full bg-[#fffef0ed] px-3 py-2 text-[10px] font-extrabold text-black">
+                  <span className="absolute inset-s-3.25 top-3.25 rounded-full bg-[#fffef0ed] px-3 py-2 text-[10px] font-extrabold text-black">
                     {property.purpose === "Sale"
                       ? t.properties.forSale
                       : t.properties.forRent}
                   </span>
 
-                  <span className="absolute bottom-[13px] end-[13px] rounded-full bg-[#17251f]/85 px-3 py-2 text-[10px] text-white">
+                  <span className="absolute bottom-3.25 inset-e-3.25 rounded-full bg-[#17251f]/85 px-3 py-2 text-[10px] text-white">
                     ▧ {property.gallery} {t.properties.photos}
                   </span>
                 </div>
                 <ScrollReveal>
-                <div className="p-[18px] text-start">
+                <div className="p-4.5 text-start">
                   <p className="mb-2 text-[11px] text-[#69746d]">
                     {translated.location}
                   </p>
@@ -225,7 +225,7 @@ export default function Properties() {
       {/* Property Details Modal */}
       {selectedProperty && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-100 flex items-center justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setSelectedProperty(null);
@@ -237,25 +237,25 @@ export default function Properties() {
             aria-modal="true"
             aria-labelledby="property-modal-title"
             dir={isArabic ? "rtl" : "ltr"}
-            className="relative my-auto max-h-[90vh] w-full max-w-[760px] overflow-y-auto rounded-[20px] bg-[#fffefa] shadow-2xl"
+            className="relative my-auto max-h-[90vh] w-full max-w-190 overflow-y-auto rounded-[20px] bg-[#fffefa] shadow-2xl"
           >
             <button
               type="button"
               onClick={() => setSelectedProperty(null)}
               aria-label={isArabic ? "إغلاق التفاصيل" : "Close details"}
-              className="absolute end-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-xl text-[#17251f] shadow transition hover:bg-[#17251f] hover:text-white"
+              className="absolute inset-e-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-xl text-[#17251f] shadow transition hover:bg-[#17251f] hover:text-white"
             >
               ×
             </button>
 
-            <div className="relative h-[240px] sm:h-[340px]">
+            <div className="relative h-60 sm:h-85">
               <img
                 src={selectedProperty.image}
                 alt={getPropertyText(selectedProperty).title}
                 className="h-full w-full object-cover"
               />
 
-              <span className="absolute start-4 top-4 rounded-full bg-[#fffefa] px-4 py-2 text-xs font-bold text-[#17251f]">
+              <span className="absolute inset-s-4 top-4 rounded-full bg-[#fffefa] px-4 py-2 text-xs font-bold text-[#17251f]">
                 {selectedProperty.purpose === "Sale"
                   ? t.properties.forSale
                   : t.properties.forRent}

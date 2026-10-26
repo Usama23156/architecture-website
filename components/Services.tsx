@@ -52,7 +52,7 @@ export default function Services() {
       dir={isArabic ? "rtl" : "ltr"}
       className="bg-[#e9ece5] py-16 md:py-20"
     >
-      <div className="mx-auto w-[92%] max-w-[1180px]">
+      <div className="mx-auto w-[92%] max-w-295">
       <ScrollReveal>
         {/* Section Heading */}
         <div className="mb-7 flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -67,7 +67,7 @@ export default function Services() {
           </div>
 
           <p
-            className={`max-w-[420px] text-sm leading-relaxed text-[#69746d] ${
+            className={`max-w-105 text-sm leading-relaxed text-[#69746d] ${
               isArabic ? "text-right" : "text-left"
             }`}
           >
@@ -77,17 +77,17 @@ export default function Services() {
         </ScrollReveal>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <article
               key={index}
-              className={`flex min-h-[210px] flex-col rounded-2xl border border-[#dce1d8] bg-[#fdfcf7] p-[23px] text-start transition duration-200 hover:-translate-y-1 hover:shadow-lg ${
+              className={`flex min-h-52.5 flex-col rounded-2xl border border-[#dce1d8] bg-[#fdfcf7] p-5.75 text-start transition duration-200 hover:-translate-y-1 hover:shadow-lg ${
                 isArabic ? "items-start" : "items-start"
               }`}
             >
               <ScrollReveal>
               <div
-                className="mb-5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[#dfe6dc] text-xl text-[#17251f]"
+                className="mb-5 grid h-10.5 w-10.5 place-items-center rounded-xl bg-[#dfe6dc] text-xl text-[#17251f]"
                 aria-hidden="true"
               >
                 {service.icon}

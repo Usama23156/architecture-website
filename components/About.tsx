@@ -18,9 +18,9 @@ export default function About() {
       dir={isArabic ? "rtl" : "ltr"}
       className="bg-[#f7f6f1] py-14 sm:py-16 md:py-20"
     >
-      <div className="mx-auto w-[90%] max-w-[1180px]">
+      <div className="mx-auto w-[90%] max-w-295">
         {/* Dark Architectural Banner */}
-        <div className="grid overflow-hidden rounded-[22px] bg-[#10251b] text-[#f7f6f1] md:min-h-[560px] md:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid overflow-hidden rounded-[22px] bg-[#10251b] text-[#f7f6f1] md:min-h-140 md:grid-cols-[1.15fr_0.85fr]">
           {/* Banner Text */}
           <ScrollReveal>
             <div className="flex flex-col justify-center p-6 sm:p-9 md:p-12 lg:p-14">
@@ -40,11 +40,11 @@ export default function About() {
                 </span>
               </h2>
 
-              <p className="mt-7 text-sm leading-[2] text-[#e0e5df] sm:text-base">
+              <p className="mt-7 text-sm leading-loose text-[#e0e5df] sm:text-base">
                 {about.bannerParagraphOne}
               </p>
 
-              <p className="mt-5 text-sm leading-[2] text-[#bfc9c1] sm:text-base">
+              <p className="mt-5 text-sm leading-loose text-[#bfc9c1] sm:text-base">
                 {about.bannerParagraphTwo}
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function About() {
 
           {/* Banner Image */}
 
-          <div className="relative min-h-[280px] overflow-hidden md:min-h-full">
+          <div className="relative min-h-70 overflow-hidden md:min-h-full">
             <img
               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90"
               alt={
@@ -95,7 +95,7 @@ export default function About() {
           </div>
 
           {/* About Image */}
-          <div className="relative h-[280px] overflow-hidden rounded-[12px] bg-[#e5e4dc] sm:h-[360px] md:h-[380px]">
+          <div className="relative h-70 overflow-hidden rounded-xl bg-[#e5e4dc] sm:h-90 md:h-95">
             <img
               src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
               alt={

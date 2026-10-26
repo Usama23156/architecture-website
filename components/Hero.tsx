@@ -27,7 +27,7 @@ export default function Hero() {
     <section
       id="home"
       dir={isArabic ? "rtl" : "ltr"}
-      className="relative isolate flex min-h-[620px] items-center overflow-hidden bg-[#17251f] py-20 md:min-h-[680px]"
+      className="relative isolate flex min-h-155 items-center overflow-hidden bg-[#17251f] py-20 md:min-h-170"
     >
       {/* Background Image */}
       <img
@@ -41,9 +41,9 @@ export default function Hero() {
 
       {/* Hero Content */}
       <ScrollReveal>
-      <div className="mx-auto w-[92%] max-w-[1180px]">
+      <div className="mx-auto w-[92%] max-w-295">
         <div
-          className={`max-w-[700px] text-white ${
+          className={`max-w-175 text-white ${
             isArabic ? "text-right" : "text-left"
           }`}
         >
@@ -57,7 +57,7 @@ export default function Hero() {
             {t.hero.titleLine2}
           </h1>
 
-          <p className="max-w-[550px] text-base leading-relaxed text-white/80 md:text-lg">
+          <p className="max-w-137.5 text-base leading-relaxed text-white/80 md:text-lg">
             {t.hero.description}
           </p>
 
@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="mt-12 grid max-w-[620px] grid-cols-3 gap-4 border-t border-white/25 pt-6">
+          <div className="mt-12 grid max-w-155 grid-cols-3 gap-4 border-t border-white/25 pt-6">
             {stats.map((stat) => (
               <div key={stat.value}>
                 <strong

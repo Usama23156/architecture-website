@@ -13,8 +13,8 @@
   },
   "hero": {
     "eyebrow": "REAL ESTATE & ARCHITECTURE",
-    "titleLine1": "Find your place.",
-  "titleLine2": "Shape your space.",
+    "titleLine1": "Discover Homes. Explore Spaces.",
+  "titleLine2": "Find Your Fit.",
   "imageAlt": "Contemporary architectural interior",
     "title": "Spaces designed around your vision.",
     "description": "Discover thoughtfully selected properties and architectural solutions tailored to your lifestyle and ambitions.",
@@ -30,7 +30,7 @@
 "properties": {
   "eyebrow": "The property edit",
   "title": "Find a unit that fits.",
-  "description": "Browse selected properties and explore their details. Prices and listings are illustrative examples.",
+  "description": " Explore available properties and discover spaces that match your lifestyle..",
   "searchPlaceholder": "Search project or location",
   "searchAria": "Search properties",
   "typeAria": "Filter by property type",

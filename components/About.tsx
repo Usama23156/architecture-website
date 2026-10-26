@@ -3,82 +3,7 @@
 import useTranslation from "@/hooks/useTranslation";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const featureIcons = [
-  <svg
-    key="home"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.4"
-    className="h-8 w-8"
-  >
-    <path
-      d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1Z"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>,
-  <svg
-    key="design"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.4"
-    className="h-8 w-8"
-  >
-    <path d="M4 3h12l4 4v14H4z" strokeLinejoin="round" />
-    <path d="M16 3v5h4M7 17h10M7 13h6M7 9h4" strokeLinecap="round" />
-    <path d="m15 12 5-5 2 2-5 5-3 1z" strokeLinejoin="round" />
-  </svg>,
-  <svg
-    key="interior"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.4"
-    className="h-8 w-8"
-  >
-    <path
-      d="M5 12V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4M4 12h16v7H4zM6 19v2m12-2v2M4 15h16"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>,
-  <svg
-    key="project"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.4"
-    className="h-8 w-8"
-  >
-    <path
-      d="M3 8h18v12H3zM8 8V5h8v3M12 12v4M10 14h4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path d="M5 4h2m10 0h2" strokeLinecap="round" />
-  </svg>,
-  <svg
-    key="trust"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.4"
-    className="h-8 w-8"
-  >
-    <path
-      d="m3 12 4-4 4 1 3-2 7 4-7 8-5-3-3 1-3-5Z"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="m7 8 4 5 3-2 4 2M11 9l3 3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>,
-];
+
 
 export default function About() {
   const { t, lang } = useTranslation();
@@ -182,30 +107,6 @@ export default function About() {
               className="h-full w-full object-cover"
             />
           </div>
-        </div>
-        </ScrollReveal>
-
-        {/* Features */}
-        <ScrollReveal>
-        <div className="mt-8 grid grid-cols-2 border-y border-[#dcdcd3] sm:grid-cols-3 md:grid-cols-5">
-          {features.map((feature, index) => (
-            <div
-              key={`${index}-${feature}`}
-              className={`flex min-h-[125px] flex-col items-start justify-center gap-3 px-3 py-5 text-start sm:px-5 md:min-h-[145px] ${
-                index !== 0
-                  ? isArabic
-                    ? "border-r border-[#dcdcd3]"
-                    : "border-l border-[#dcdcd3]"
-                  : ""
-              }`}
-            >
-              <span className="text-[#17251f]">{featureIcons[index]}</span>
-
-              <p className="whitespace-pre-line text-xs leading-[1.6] text-[#303b34] sm:text-sm">
-                {feature}
-              </p>
-            </div>
-          ))}
         </div>
         </ScrollReveal>
 

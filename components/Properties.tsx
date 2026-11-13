@@ -6,7 +6,9 @@ import { properties } from "@/data/properties";
 import useTranslation from "@/hooks/useTranslation";
 import ScrollReveal from "@/components/ScrollReveal";
 
-type Property = (typeof properties)[number];
+type Property = (typeof properties)[number] & {
+  images?: string[];
+};
 
 export default function Properties() {
   const { t, lang } = useTranslation();
@@ -19,6 +21,30 @@ export default function Properties() {
   const [purpose, setPurpose] = useState("");
   const [selectedProperty, setSelectedProperty] =
     useState<Property | null>(null);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  const galleryImages = selectedProperty
+    ? selectedProperty.images?.length
+      ? selectedProperty.images
+      : [selectedProperty.image]
+    : [];
+
+  useEffect(() => {
+    setActiveImageIndex(0);
+  }, [selectedProperty?.id]);
+
+  const showNextImage = () => {
+    if (galleryImages.length < 2) return;
+    setActiveImageIndex((current) => (current + 1) % galleryImages.length);
+  };
+
+  const showPreviousImage = () => {
+    if (galleryImages.length < 2) return;
+    setActiveImageIndex(
+      (current) => (current - 1 + galleryImages.length) % galleryImages.length,
+    );
+  };
 
   const getPropertyText = (property: Property) => {
     const translated =
@@ -248,18 +274,88 @@ export default function Properties() {
               ×
             </button>
 
-            <div className="relative h-60 sm:h-85">
+            <div
+              className="group relative h-60 touch-pan-y bg-[#e5e4dc] sm:h-85"
+              onTouchStart={(event) => {
+                setTouchStartX(event.touches[0].clientX);
+              }}
+              onTouchEnd={(event) => {
+                if (touchStartX === null) return;
+
+                const difference =
+                  touchStartX - event.changedTouches[0].clientX;
+
+                if (difference > 50) showNextImage();
+                if (difference < -50) showPreviousImage();
+
+                setTouchStartX(null);
+              }}
+            >
               <img
-                src={selectedProperty.image}
+                src={galleryImages[activeImageIndex] || selectedProperty.image}
                 alt={getPropertyText(selectedProperty).title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition-opacity duration-300"
               />
 
-              <span className="absolute inset-s-4 top-4 rounded-full bg-[#fffefa] px-4 py-2 text-xs font-bold text-[#17251f]">
+              <span className="absolute inset-s-4 top-4 z-10 rounded-full bg-[#fffefa] px-4 py-2 text-xs font-bold text-[#17251f]">
                 {selectedProperty.purpose === "Sale"
                   ? t.properties.forSale
                   : t.properties.forRent}
               </span>
+
+              {galleryImages.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={showPreviousImage}
+                    aria-label={isArabic ? "الصورة السابقة" : "Previous image"}
+                    className="absolute inset-s-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#17251f] shadow transition hover:bg-[#245c40] hover:text-white"
+                  >
+                    ‹
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={showNextImage}
+                    aria-label={isArabic ? "الصورة التالية" : "Next image"}
+                    className="absolute inset-e-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#17251f] shadow transition hover:bg-[#245c40] hover:text-white"
+                  >
+                    ›
+                  </button>
+
+                  <span className="absolute bottom-4 inset-e-4 z-10 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white">
+                    {activeImageIndex + 1} / {galleryImages.length}
+                  </span>
+
+                  <div className="absolute inset-x-0 bottom-0 z-10 flex gap-2 overflow-x-auto bg-linear-to-t from-black/70 to-transparent px-4 pb-3 pt-8">
+                    {galleryImages.map((image, index) => (
+                      <button
+                        key={`${image}-${index}`}
+                        type="button"
+                        onClick={() => setActiveImageIndex(index)}
+                        aria-label={
+                          isArabic
+                            ? `عرض الصورة ${index + 1}`
+                            : `View image ${index + 1}`
+                        }
+                        aria-pressed={activeImageIndex === index}
+                        className={`h-12 w-16 shrink-0 overflow-hidden rounded-lg border-2 transition sm:h-14 sm:w-20 ${
+                          activeImageIndex === index
+                            ? "border-white opacity-100"
+                            : "border-transparent opacity-70 hover:opacity-100"
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt=""
+                          loading="lazy"
+                          className="h-full w-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="p-5 sm:p-8">

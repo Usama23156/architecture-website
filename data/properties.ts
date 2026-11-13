@@ -1,4 +1,3 @@
-
 export type Property = {
   id: number;
   type: "Apartment" | "Villa" | "Duplex";
@@ -13,6 +12,8 @@ export type Property = {
   beds: number;
   baths: number;
   image: string;
+  /** Additional gallery images. Keep the main image in this array too. */
+  images?: string[];
   gallery: number;
   description: string;
   descriptionAr: string;
@@ -25,20 +26,31 @@ export const properties: Property[] = [
     purpose: "Sale",
     title: "Contemporary family apartment",
     titleAr: "شقة عصرية مناسبة للعائلة",
-    location: "New Cairo · Fifth Settlement",
-    locationAr: "القاهرة الجديدة · التجمع الخامس",
+    location: "Degla Landmark Compound - Nasr City - Egypt",
+    locationAr: "كمبوند ديجلة لاند مارك - مدينة نصر - مصر",
     price: "EGP 4,850,000",
     priceAr: "٤٬٨٥٠٬٠٠٠ جنيه مصري",
-    area: 145,
+    area: 122,
     beds: 3,
-    baths: 2,
+    baths: 1,
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
-    gallery: 4,
+      "/apartmint-1/apartmint-1.1.jpg",
+    // Add the real image URLs for this property's gallery here.
+    images: [
+      "/apartmint-1/apartmint-1.1.jpg",
+      "/apartmint-1/apartmint-1.2.jpg",
+      "/apartmint-1/apartmint-1.5.jpg",
+      "/apartmint-1/apartmint-1.7.jpg",
+      "/apartmint-1/apartmint-1.9.jpg",
+      "/apartmint-1/apartmint-1.10.jpg",
+      "/apartmint-1/apartmint-1.12.jpg",
+ 
+    ],
+    gallery: 7,
     description:
       "A bright, well-planned apartment with an open living area and a practical family layout.",
     descriptionAr:
-      "شقة مشرقة بتصميم عملي ومساحة معيشة مفتوحة، توفر توزيعًا مناسبًا لاحتياجات الأسرة.",
+"شقة للبيع في البرج الدائري.. برج رقم ١٧ في كومباوند ديجله لاند مارك مدينه نصر التشطيب الترا سوبرلوكس المطبخ بالكامل مع الاجهزه.. بوتاجاز بلت ان مع الشفاط ..والغساله والثلاجة من ميديا المطبخ حوائط وارضية بورسلين مقاس 60x120",
   },
   {
     id: 2,
@@ -55,6 +67,10 @@ export const properties: Property[] = [
     baths: 4,
     image:
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85",
+    // Add the real image URLs for this property's gallery here.
+    images: [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85",
+    ],
     gallery: 6,
     description:
       "A modern villa with a private garden and room for tailored finishes.",
@@ -76,13 +92,17 @@ export const properties: Property[] = [
     baths: 3,
     image:
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85",
+    // Add the real image URLs for this property's gallery here.
+    images: [
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85",
+    ],
     gallery: 5,
     description:
       "A spacious duplex with a distinct living zone and private outdoor space.",
     descriptionAr:
       "وحدة دوبلكس واسعة تضم منطقة معيشة منفصلة ومساحة خارجية خاصة للاستمتاع بالهواء الطلق.",
   },
-  {
+       {
     id: 4,
     type: "Apartment",
     purpose: "Rent",
@@ -97,6 +117,10 @@ export const properties: Property[] = [
     baths: 2,
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
+    // Add the real image URLs for this property's gallery here.
+    images: [
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
+    ],
     gallery: 4,
     description:
       "A calm, functional apartment suited to professionals.",
@@ -118,6 +142,10 @@ export const properties: Property[] = [
     baths: 1,
     image:
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85",
+    // Add the real image URLs for this property's gallery here.
+    images: [
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85",
+    ],
     gallery: 5,
     description:
       "A sample coastal property listing. Verified project details are still needed.",
@@ -139,6 +167,10 @@ export const properties: Property[] = [
     baths: 3,
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
+    // Add the real image URLs for this property's gallery here.
+    images: [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
+    ],
     gallery: 6,
     description:
       "A sample rental villa with garden-facing living spaces.",

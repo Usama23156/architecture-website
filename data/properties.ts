@@ -66,10 +66,15 @@ export const properties: Property[] = [
     beds: 4,
     baths: 4,
     image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85",
+      "/apartmint-2/apartmint-2.1.jpg",
     // Add the real image URLs for this property's gallery here.
     images: [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85",
+      "/apartmint-2/apartmint-2.1.jpg",
+      "/apartmint-2/apartmint-2.2.jpg",
+      "/apartmint-2/apartmint-2.3.jpg",
+      "/apartmint-2/apartmint-2.4.jpg",
+      "/apartmint-2/apartmint-2.5.jpg",
+      "/apartmint-2/apartmint-2.6.jpg",
     ],
     gallery: 6,
     description:
@@ -91,12 +96,17 @@ export const properties: Property[] = [
     beds: 3,
     baths: 3,
     image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85",
+      "/apartmint-3/apartmint-3.1.jpg",
     // Add the real image URLs for this property's gallery here.
     images: [
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85",
+      "/apartmint-3/apartmint-3.1.jpg",
+      "/apartmint-3/apartmint-3.2.jpg",
+      "/apartmint-3/apartmint-3.3.jpg",
+      "/apartmint-3/apartmint-3.4.jpg",
+      "/apartmint-3/apartmint-3.5.jpg",
+      "/apartmint-3/apartmint-3.6.jpg",
     ],
-    gallery: 5,
+    gallery: 6,
     description:
       "A spacious duplex with a distinct living zone and private outdoor space.",
     descriptionAr:
